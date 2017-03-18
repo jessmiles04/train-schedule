@@ -1,0 +1,25 @@
+     .jumbotron {
+     background-color: #000000 ;
+     text-align: center;
+     }
+
+     div.panel-heading {
+     background-color: #000080 ;
+     color: #FFFFFF ;
+     }
+
+  h1 {
+     color: #FFFFFF ;
+   }
+  h2 {
+     color: #FFFFFF ;
+   }
+  td, th{
+    text-align: center;
+  }
+  #userInput {
+    background-color: #FFFFFF ; 
+  }
+    #train-table {
+    background-color: #FFFFFF ; 
+  }

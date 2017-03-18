@@ -6,85 +6,63 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-     <style type="text/css">
-     .jumbotron {
-     background-color: #000000 ;
-     text-align: center;
-     }
+<link rel="stylesheet" type="text/css" href="assets/style.css">
 
-     div.panel-heading {
-     background-color: #000080 ;
-     color: #FFFFFF ;
-     }
-
-  h1 {
-     color: #FFFFFF ;
-   }
-  h2 {
-     color: #FFFFFF ;
-   }
-  td, th{
-    text-align: center;
-  }
-  #userInput {
-    background-color: #FFFFFF ; 
-  }
-    #train-table {
-    background-color: #FFFFFF ; 
-  }
-</style>
 </head>
-<body background="assets/background.png">
-
+<body background="assets/background.jpg">
+<!-- Container to hold everything -->
 <div class="container" id="main-container">
-
-<div class="jumbotron">
-  <div class="row">
-  <div class="col-md-8 col-xs-12">
-  <h1>Platform 9 3/4</h1>
-
-  </div>
-  <div class="col-md-4 col-xs-12">
-  <div class="time"><h2>Current Time <span id="currentTime"></span></h2></div></div>
-</div>
-</div>
+    
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <h1>Platform 9 3/4</h1>
+           </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="time"><h2>Current Time <span id="currentTime"></span></h2></div></div>
+        </div>
+    </div>
 
     <div class="row">
-  <div class="col-md-4 col-xs-12" id="userInput">
-       <div id="tableHeader"><h3><center>Add A Train</center></h3></div>
+      <div class="col-md-4 col-xs-12" id="userInput">
+       <div id="tableHeader"><h3><center>Add A Train</center></h3>
+       </div>
+
      <form>
-      <div class="row">
-      <div class="col-xs-6 col-xs-offset-3">
-        <form id="newEmployeeForm">
-          <div class="form-group">
-            <label>Train Name</label>
-            <input type="text" id="trainName" class="form-control" placeholder="Train Name Here">
-          </div>
-          <div class="form-group">
-            <label>Destination</label>
-            <input type="text" id="destination" class="form-control" placeholder="Destination">
-          </div>
-          <div class="form-group">
-            <label>First Train Time (Military Time)</label>
-            <input type="text" id="firstTrain" class="form-control" placeholder="HH:MM">
-          </div>
-          <div class="form-group">
-            <label>Frenquency (Minutes)</label>
-            <input type="text" id="frequency" class="form-control" placeholder="00">
-          </div>
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <form id="newEmployeeForm">
+              <div class="form-group">
+                <label>Train Name</label>
+                  <input type="text" id="trainName" class="form-control" placeholder="Train Name Here">
+              </div>
+
+              <div class="form-group">
+                <label>Destination</label>
+                  <input type="text" id="destination" class="form-control" placeholder="Destination">
+              </div>
+
+              <div class="form-group">
+                <label>First Train Time (Military Time)</label>
+                  <input type="text" id="firstTrain" class="form-control" placeholder="HH:MM">
+              </div>
+
+              <div class="form-group">
+                <label>Frenquency (Minutes)</label>
+                <input type="text" id="frequency" class="form-control" placeholder="00">
+              </div>
           
-          
-          <div class="form-group text-center">
-            <button class="btn btn-primary" id="submit">
-              Submit
-            </button>
-          </div>
+              <div class="form-group text-center">
+                <button class="btn btn-primary" id="submit">
+                   Submit
+                </button>
+              </div>
         </form>
       </div>
     </div>
 
     </form>
-    </div>
+  </div>
 
   <div class="col-md-8 col-xs-12">
     <table class="table" id="train-table">
@@ -109,19 +87,13 @@
         </tbody>
       </table>
      </div>
-
-
-
-
-
-
-
-
+  </div>
 </div>
-</div>
+<!--Script for Moment-->
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
+<!--Script for jQuery-->
 <script src="https://code.jquery.com/jquery.js"></script>
+<!--Script for Firebase-->
 <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
 <script src="logic.js"></script>
 
