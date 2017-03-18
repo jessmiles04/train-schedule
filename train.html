@@ -2,53 +2,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Train Schedule</title>
+  <title>Platform 9 3/4</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-</head>
-<body>
 
-<div class="container">
+     <style type="text/css">
+     .jumbotron {
+     background-color: #000000 ;
+     text-align: center;
+     }
+
+     div.panel-heading {
+     background-color: #000080 ;
+     color: #FFFFFF ;
+     }
+
+  h1 {
+     color: #FFFFFF ;
+   }
+  h2 {
+     color: #FFFFFF ;
+   }
+  td, th{
+    text-align: center;
+  }
+  #userInput {
+    background-color: #FFFFFF ; 
+  }
+    #train-table {
+    background-color: #FFFFFF ; 
+  }
+</style>
+</head>
+<body background="assets/background.png">
+
+<div class="container" id="main-container">
 
 <div class="jumbotron">
   <div class="row">
   <div class="col-md-8 col-xs-12">
-  <h1>Train Schedule</h1>
+  <h1>Platform 9 3/4</h1>
+
   </div>
   <div class="col-md-4 col-xs-12">
   <div class="time"><h2>Current Time <span id="currentTime"></span></h2></div></div>
 </div>
 </div>
-    <div id="tableBorder">
-    <div id="tableHeader"><p>Current Train Schedule</p></div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Train Name</th>
-            <th>Destination</th>
-            <th>Frequency (Minutes)</th>
-            <th>Next Arrival</th>
-            <th>Minutes Away</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hogwarts Express</td>
-            <td>Scotland</td>
-            <td>30</td>
-            <td>09:30</td>
-            <td>14</td>
-          </tr>
-        </tbody>
-      </table>
-     </div>
 
-
-
-     <div id="tableHeader"><p>Add A Train</p></div>
-
-     
-
+    <div class="row">
+  <div class="col-md-4 col-xs-12" id="userInput">
+       <div id="tableHeader"><h3><center>Add A Train</center></h3></div>
      <form>
       <div class="row">
       <div class="col-xs-6 col-xs-offset-3">
@@ -81,10 +84,40 @@
     </div>
 
     </form>
+    </div>
+
+  <div class="col-md-8 col-xs-12">
+    <table class="table" id="train-table">
+     <div class="panel-heading"><strong>Train Schedule</strong></div>
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (Minutes)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hogwarts Express</td>
+            <td>Scotland</td>
+            <td>30</td>
+            <td>09:30</td>
+            <td>14</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
 
 
 
 
+
+
+
+
+</div>
 </div>
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
